@@ -1,0 +1,82 @@
+$containerSize:400px;
+$boxSize:100px;
+$tinyBoxSize:30px;
+.container {
+    width: $containerSize;
+    height: $containerSize;
+    border: 1px solid black;
+    margin: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+
+#container1 {
+    @extend .container;
+}
+
+#container2 {
+    @extend .container;
+    left: 450px;
+}
+
+#container3 {
+    @extend .container;
+    left: 900px;
+}
+
+@mixin box {
+    width: $boxSize;
+    height: $boxSize;
+    }
+
+
+#simpleBox {
+    @include box;
+    background-color: green;
+    position: relative;
+    top: 150px;
+    left: 150px;
+    }
+
+@mixin cornerBox {
+    @include box;
+    position: absolute;
+}
+
+#cornerBox1 {
+    @include cornerBox;
+    background-color: red;
+    top: 0px;
+    left: 0px;
+}
+
+#cornerBox2 {
+    @include cornerBox;
+    background-color: green;
+    top: 0px;
+    right: 0px;
+}
+
+#cornerBox3 {
+    @include cornerBox;
+    background-color:yellow;
+    bottom: 0px;
+    left: 0px;
+}
+
+#cornerBox4 {
+    @include cornerBox;
+    background-color:blue;
+    bottom: 0px;
+    right: 0px;
+}
+
+.tinyBox {
+    width: $tinyBoxSize;
+    height: $tinyBoxSize;
+    background-color: white;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}

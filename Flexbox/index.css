@@ -1,0 +1,57 @@
+body {
+  background: black;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-basis: 40%;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+}
+
+.logo {
+  border: 1px solid white;
+}
+
+section {
+  color: white;
+  display: flex;
+  align-items: stretch;
+}
+
+.filter {
+  border: 1px solid white;
+  flex-basis: 20%;
+}
+
+.products {
+  flex-basis: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type:none;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+article {
+  border: 1px solid white;
+}
+
+.product {
+  flex-basis: 15%;
+  margin: 20px;
+  border: 1px solid white;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+}
+
+
